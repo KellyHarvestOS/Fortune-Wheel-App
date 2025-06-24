@@ -1,5 +1,9 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;600&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,7 +24,65 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Задаем фоновое изображение */
+  background-image: url('/241.png');
+
+  /* Чтобы изображение покрывало весь экран и не повторялось */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  /* Фиксируем фон, чтобы он не прокручивался вместе с контентом */
+  background-attachment: fixed;
+
+
+  position: relative;
+  z-index: 5;
+
+
+}
+/* Добавьте это в ваш globals.css */
+@layer base {
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+@layer utilities {
+  @keyframes aurora {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
+    }
+      @keyframes pulse-glow-purple {
+    0%, 100% {
+      filter: drop-shadow(0 0 20px rgba(192, 132, 252, 0.6));
+    }
+    50% {
+      filter: drop-shadow(0 0 35px rgba(192, 132, 252, 0.9));
+    }
+      }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.7));
+    }
+    50% {
+      filter: drop-shadow(0 0 16px rgba(0, 255, 255, 1));
+    }
+  }
 }
