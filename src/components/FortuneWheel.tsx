@@ -21,14 +21,14 @@ interface HistoryEntry {
 }
 
 const initialSlices: Slice[] = [
-    { id: 1, label: '0', percentage: 33, color: '#00b5b5' },
+    { id: 1, label: '0', percentage: 35, color: '#00b5b5' },
     { id: 2, label: '3 н к', percentage: 7, color: '#42006e' },
     { id: 3, label: 'х2', percentage: 20, color: '#e00096' },
     { id: 4, label: '- все яд.', percentage: 10, color: '#007fb5' },
     { id: 5, label: 'всем +5', percentage: 5, color: '#610041' },
     { id: 6, label: 'х5', percentage: 10, color: '#42006e' },
-    { id: 7, label: '30', percentage: 1, color: '#04062e' },
-    { id: 8, label: 'до 1 н', percentage: 14, color: '#1b02bd' },
+    { id: 7, label: '30', percentage: 4, color: '#04062e' },
+    { id: 8, label: 'до 1 н', percentage: 9, color: '#1b02bd' },
 ];
 
 
